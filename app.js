@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const authRoutes = require('./routes/authRoutes');
 
 const app = express();
 
@@ -23,3 +24,5 @@ app.get('/', (req, res) => res.render('home'));
 
 //renders the smoothies.ejs page 
 app.get('/smoothies', (req, res) => res.render('smoothies'));
+
+app.use(authRoutes);
