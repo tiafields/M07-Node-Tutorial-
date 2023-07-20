@@ -7,6 +7,8 @@ const app = express();
 // middleware
 //making the CSS public by using thr public folder 
 app.use(express.static('public'));
+//more middleware for postman, takes json data and passes a js object 
+app.use(express.json());
 
 // view engine
 app.set('view engine', 'ejs');
